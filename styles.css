@@ -1,0 +1,38 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+     
+}
+
+.bottom {
+    background: url('images/background_header.jpg');
+    background-size: cover;
+}
+
+#top {
+    background: #292929;
+    display: flex;
+    justify-content: space-around
+}
+
+.contactTop a {
+    color : #ffffff;
+    margin-left: 10px
+}
+
+.contact {
+    background: url('images/background2.jpg');
+    background-size: cover
+}
+
+li {
+    list-style-type: none
+}
+
+footer {
+    background: #292929
+}
+
