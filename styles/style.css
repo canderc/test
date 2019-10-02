@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header_top {
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.header_top_social img {
+  margin-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.header_top_contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header_top_contact a {
+  margin-right: 40px;
+  padding-bottom: 5px;
+  color: white;
+}
+
+.header_top_contact img {
+  margin-right: 5px;
+}
+
+.header_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.header_nav a {
+  text-decoration: none;
+  margin-right: 55px;
+  color: #626263;
+}
+
+.header_nav_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header_bottom {
+  margin: 0 auto;
+  text-align: center;
+  background-image: url("/img/background_header.jpg");
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  color: azure;
+}
+
+.header_bottom_contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header_bottom_contact_skype {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: aliceblue;
+}
+
+.header_bottom_contact_skype a {
+  color: aliceblue;
+}
+
+.header_bottom_contact_email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header_bottom_contact_email a {
+  color: aliceblue;
+}
+/*# sourceMappingURL=style.css.map */

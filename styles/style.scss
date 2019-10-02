@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0
+}
+
+.header_top {
+    background: black;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.header_top_social img {
+    margin-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px
+}
+
+.header_top_contact {
+    display: flex;
+    align-items: center
+}
+
+.header_top_contact a {
+    margin-right: 40px;
+    padding-bottom: 5px;
+    color: white
+}
+
+.header_top_contact img {
+    margin-right: 5px
+}
+
+.header_nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header_nav a {
+    text-decoration: none;
+    margin-right: 55px;
+    color: #626263  
+}
+
+.header_nav_menu {
+    display: flex;
+    align-items: center;
+}
+
+.header_bottom {
+    margin: 0 auto;
+    text-align: center;
+    background-image : url('/img/background_header.jpg');
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    color: azure
+}
+
+.header_bottom_contact {
+    display: flex;
+    justify-content: center;
+}
+
+.header_bottom_contact_skype {
+    display: flex;
+    align-items: center;
+    color: aliceblue
+}
+
+.header_bottom_contact_skype a {
+    color: aliceblue
+}
+
+.header_bottom_contact_email {
+    display: flex;
+    align-items: center
+}
+
+.header_bottom_contact_email a {
+    color: aliceblue;
+    align-items: 
+}

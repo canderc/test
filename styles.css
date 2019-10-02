@@ -8,7 +8,7 @@ body {
 }
 
 .bottom {
-    background: url('images/background_header.jpg');
+    background: url('img/background_header.jpg');
     background-size: cover;
 }
 
@@ -24,7 +24,7 @@ body {
 }
 
 .contact {
-    background: url('images/background2.jpg');
+    background: url('img/background2.jpg');
     background-size: cover
 }
 
