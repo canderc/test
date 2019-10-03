@@ -1,6 +1,16 @@
 body {
     margin: 0;
-    padding: 0
+    padding: 0;
+    width: 100%
+}
+
+.wrap {
+    max-width: 1920px;
+    margin: 0 auto
+}
+
+.size {
+    max-width: 1170px;
 }
 
 .header_top {
@@ -10,8 +20,12 @@ body {
     
 }
 
+a {
+    text-decoration: none
+}
+
 .header_top_social img {
-    margin-right: 10px;
+    margin-right: 12px;
     padding-top: 10px;
     padding-bottom: 5px
 }
@@ -24,11 +38,17 @@ body {
 .header_top_contact a {
     margin-right: 40px;
     padding-bottom: 5px;
-    color: white
+    color: #ffffff;
+    font-family: 'ProximaNova';
+    font-size: 17px;
 }
 
 .header_top_contact img {
     margin-right: 5px
+}
+
+.logo {
+    font-size: 36px
 }
 
 .header_nav {
@@ -37,9 +57,9 @@ body {
 }
 
 .header_nav a {
-    text-decoration: none;
-    margin-right: 55px;
-    color: #626263  
+    margin-right: 45px;
+    color: #292929;
+    font-size: 20px;
 }
 
 .header_nav_menu {
@@ -51,15 +71,54 @@ body {
     margin: 0 auto;
     text-align: center;
     background-image : url('/img/background_header.jpg');
-    background-size: 100%;
+    background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
-    color: azure
+    color: azure;
+    border-top : 4px solid #009ce3
+    
+}
+
+.header_bottom h1 {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 110px;
+    margin-bottom: 30px;
+    font-size: 80px
+}
+
+.header_bottom_from {
+    background-image: url(/img/vector.png);
+    margin: 0 auto;
+    height: 82px;
+    width: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_bottom h2 {
+    color: #fa4a33;
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 50px
+}
+
+.header_bottom p {
+    margin-top: 30px;
+    font-size: 38px
+}
+
+.header_bottom h3 {
+    margin-top: 70px;
+    font-size: 36px
 }
 
 .header_bottom_contact {
     display: flex;
     justify-content: center;
+    padding-bottom: 100px
 }
 
 .header_bottom_contact_skype {
@@ -69,15 +128,67 @@ body {
 }
 
 .header_bottom_contact_skype a {
-    color: aliceblue
+    color: aliceblue;
+    padding-bottom: 20px;
+    font-size: 30px;
+    margin-left: -15px
 }
 
 .header_bottom_contact_email {
     display: flex;
-    align-items: center
+    align-items: center;
+    margin-left: 100px
 }
 
 .header_bottom_contact_email a {
     color: aliceblue;
-    align-items: 
+    padding-bottom: 20px;
+    font-size: 30px;
+    margin-left: -15px
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 74px;
+}
+
+.content h2 {
+    margin-bottom: 45px;
+    font-size: 50px
+}
+
+.content_img {
+    float: left;
+    margin-right: 45px;
+    margin-bottom: 45px
+}
+
+.content_text p {
+    font-size: 19px
+}
+
+.content_text1 {
+    display: flex
+}
+
+.content_text2 {
+    display: flex
+}
+
+.content_text3 {
+    display: flex
+}
+
+.btn {
+    width: 240px;
+    height: 55px;
+    background: #fa4a33;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    color: #fedbd6;
+    font-size: 20px
 }
