@@ -1,7 +1,46 @@
-body {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
-  width: 100%;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .wrap {
@@ -9,12 +48,8 @@ body {
   margin: 0 auto;
 }
 
-.size_content {
-  max-width: 1720px;
-}
-
-.header_top {
-  background: black;
+.content {
+  max-width: 1170px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,22 +61,39 @@ a {
   text-decoration: none;
 }
 
-.header_top_social img {
+.header_top {
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.header_top .header_top_social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 670px;
+}
+
+.header_top .header_top_social img {
   margin-right: 12px;
   padding-top: 10px;
   padding-bottom: 5px;
 }
 
-.header_top_contact {
+.header_top .header_top_contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: -40px;
 }
 
-.header_top_contact a {
+.header_top .header_top_contact a {
   margin-right: 40px;
   padding-bottom: 5px;
   color: #ffffff;
@@ -49,21 +101,26 @@ a {
   font-size: 17px;
 }
 
-.header_top_contact img {
+.header_top .header_top_contact img {
   margin-right: 5px;
 }
 
 .logo {
   font-size: 36px;
+  padding-left: 45px;
+  margin-right: 300px;
 }
 
 .header_nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 1170px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  margin-top: 55px;
 }
 
 .header_nav a {
@@ -72,13 +129,14 @@ a {
   font-size: 20px;
 }
 
-.header_nav_menu {
+.header_nav .header_nav_menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: -45px;
 }
 
 .header_bottom {
@@ -99,7 +157,7 @@ a {
   font-size: 80px;
 }
 
-.header_bottom_from {
+.header_bottom .header_bottom_from {
   background-image: url(/img/vector.png);
   margin: 0 auto;
   height: 82px;
@@ -134,7 +192,7 @@ a {
   font-size: 36px;
 }
 
-.header_bottom_contact {
+.header_bottom .header_bottom_contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,7 +202,7 @@ a {
   padding-bottom: 100px;
 }
 
-.header_bottom_contact_skype {
+.header_bottom .header_bottom_contact .header_bottom_contact_skype {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,14 +212,14 @@ a {
   color: aliceblue;
 }
 
-.header_bottom_contact_skype a {
+.header_bottom .header_bottom_contact .header_bottom_contact_skype a {
   color: aliceblue;
   padding-bottom: 20px;
   font-size: 30px;
   margin-left: -15px;
 }
 
-.header_bottom_contact_email {
+.header_bottom .header_bottom_contact .header_bottom_contact_email {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,14 +229,14 @@ a {
   margin-left: 100px;
 }
 
-.header_bottom_contact_email a {
+.header_bottom .header_bottom_contact .header_bottom_contact_email a {
   color: aliceblue;
   padding-bottom: 20px;
   font-size: 30px;
   margin-left: -15px;
 }
 
-.content {
+.about-us {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -194,37 +252,31 @@ a {
   margin: 0 auto;
 }
 
-.content h2 {
+.about-us h2 {
   margin-bottom: 45px;
   font-size: 50px;
+  margin-top: 145px;
 }
 
-.content_img {
+.about-us_img {
   float: left;
   margin-right: 45px;
   margin-bottom: 45px;
 }
 
-.content_text p {
+.about-us_text p {
   font-size: 19px;
 }
 
-.content_text1 {
+.about-us_description_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.content_text2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.content_text3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.about-us_description_item img {
+  max-width: 125px;
+  max-height: 125px;
 }
 
 .btn {
@@ -245,18 +297,18 @@ a {
   font-size: 20px;
 }
 
-.starts h2 {
+.payments h2 {
   text-align: center;
   font-size: 50px;
   margin-top: 115px;
   margin-bottom: 85px;
 }
 
-h2 span {
+.payments span {
   color: #fa4a33;
 }
 
-.start {
+.payments_block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -264,9 +316,11 @@ h2 span {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto;
+  max-width: 1170px;
+  margin-bottom: 100px;
 }
 
-.start_item {
+.payments_block .payments_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -282,9 +336,115 @@ h2 span {
   font-size: 19px;
 }
 
-.contakt {
+.payments_block .payments_item img {
+  max-width: 125px;
+  max-height: 125px;
+}
+
+.contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: url("../img/background2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.contact h2 {
+  color: #ffffff;
+  font-size: 50px;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+.contact .contact_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1170px;
+  padding-bottom: 50px;
+}
+
+.contact .contact_item .contact_icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.contact .contact_item .contact_icons img {
+  max-width: 125px;
+  max-height: 125px;
+}
+
+.contact .contact_item .contact_icons a {
+  color: #ffffff;
+  font-size: 19px;
+  margin-left: 30px;
+}
+
+.contact .contact_item .contact_icons p {
+  color: #ffffff;
+  font-size: 19px;
+  margin-left: 30px;
+}
+
+.faq {
+  max-width: 1170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.faq h2 {
+  margin-top: 160px;
+}
+
+.faq .faq_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.faq .faq_item ul li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer {
+  background: #1b1b1b;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .content_footer {
+  max-width: 1170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=style.css.map */
