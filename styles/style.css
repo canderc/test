@@ -9,8 +9,8 @@ body {
   margin: 0 auto;
 }
 
-.size {
-  max-width: 1170px;
+.size_content {
+  max-width: 1720px;
 }
 
 .header_top {
@@ -84,7 +84,7 @@ a {
 .header_bottom {
   margin: 0 auto;
   text-align: center;
-  background-image: url("/img/background_header.jpg");
+  background-image: url("../img/background_header.jpg");
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -190,6 +190,8 @@ a {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 74px;
+  max-width: 1170px;
+  margin: 0 auto;
 }
 
 .content h2 {
@@ -241,5 +243,48 @@ a {
   border-radius: 30px;
   color: #fedbd6;
   font-size: 20px;
+}
+
+.starts h2 {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 115px;
+  margin-bottom: 85px;
+}
+
+h2 span {
+  color: #fa4a33;
+}
+
+.start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+.start_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  font-size: 19px;
+}
+
+.contakt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */

@@ -9,8 +9,8 @@ body {
     margin: 0 auto
 }
 
-.size {
-    max-width: 1170px;
+.size_content {
+    max-width: 1720px;
 }
 
 .header_top {
@@ -70,7 +70,7 @@ a {
 .header_bottom {
     margin: 0 auto;
     text-align: center;
-    background-image : url('/img/background_header.jpg');
+    background-image : url('../img/background_header.jpg');
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -152,6 +152,8 @@ a {
     flex-direction: column;
     align-items: center;
     margin-top: 74px;
+    max-width: 1170px;
+    margin: 0 auto
 }
 
 .content h2 {
@@ -191,4 +193,33 @@ a {
     border-radius: 30px;
     color: #fedbd6;
     font-size: 20px
+}
+
+.starts h2 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 115px;
+    margin-bottom: 85px
+}
+
+h2 span {
+    color: #fa4a33;
+}
+
+.start {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto
+}
+
+.start_item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: 100%;
+    font-size: 19px
+}
+
+.contakt {
+    display: flex
 }
