@@ -1,3 +1,66 @@
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url("../fonts/Montserrat-Regular.eot");
+  src: url("../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url("../fonts/Montserrat-ExtraBold.eot");
+  src: url("../fonts/Montserrat-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-ExtraBold.woff") format("woff"), url("../fonts/Montserrat-ExtraBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Extra Bold';
+  src: local("../fonts/Montserrat Extra Bold"), local("../fonts/Montserrat-Extra-Bold"), url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBold.woff") format("woff"), url("../fonts/Montserrat-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro Regular';
+  src: url("../fonts/SourceSansPro-Regular.eot");
+  src: url("../fonts/SourceSansPro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/SourceSansPro-Regular.woff") format("woff"), url("../fonts/SourceSansPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro Semibold';
+  src: url("../fonts/SourceSansPro-SemiBold.eot");
+  src: url("../fonts/SourceSansPro-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/SourceSansPro-SemiBold.woff") format("woff"), url("../fonts/SourceSansPro-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro Bold';
+  src: url("../fonts/SourceSansPro-Bold.eot");
+  src: url("../fonts/SourceSansPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/SourceSansPro-Bold.woff") format("woff"), url("../fonts/SourceSansPro-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Regular';
+  src: url("../fonts/ProximaNova-Regular.eot");
+  src: url("../fonts/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Semibold';
+  src: url("../fonts/ProximaNova-Semibold.eot");
+  src: url("../fonts/ProximaNova-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Semibold.woff") format("woff"), url("../fonts/ProximaNova-Semibold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -53,8 +116,10 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
 }
 
 a {
@@ -63,18 +128,12 @@ a {
 
 .header_top {
   background: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
 .header_top .header_top_social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 670px;
 }
 
 .header_top .header_top_social img {
@@ -90,15 +149,18 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: -40px;
+}
+
+.header_top .header_top_contact :nth-child(3) {
+  margin-left: 20px;
 }
 
 .header_top .header_top_contact a {
-  margin-right: 40px;
   padding-bottom: 5px;
   color: #ffffff;
   font-family: 'ProximaNova';
   font-size: 17px;
+  font-family: 'Proxima Nova Semibold';
 }
 
 .header_top .header_top_contact img {
@@ -108,25 +170,25 @@ a {
 .logo {
   font-size: 36px;
   padding-left: 45px;
-  margin-right: 300px;
+  font-family: 'Montserrat Bold';
+  color: #0099ff;
+}
+
+.logo span {
+  color: #3366cc;
 }
 
 .header_nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   max-width: 1170px;
   margin: 0 auto;
   margin-bottom: 50px;
   margin-top: 55px;
-}
-
-.header_nav a {
-  margin-right: 45px;
-  color: #292929;
-  font-size: 20px;
 }
 
 .header_nav .header_nav_menu {
@@ -136,7 +198,13 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: -45px;
+}
+
+.header_nav .header_nav_menu a {
+  color: #3c3c3c;
+  font-size: 20px;
+  margin-left: 50px;
+  font-family: 'Source Sans Pro Regular';
 }
 
 .header_bottom {
@@ -146,15 +214,15 @@ a {
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-  color: azure;
+  color: #f8fcff;
   border-top: 4px solid #009ce3;
 }
 
 .header_bottom h1 {
-  font-family: 'Montserrat', sans-serif;
   margin-top: 110px;
   margin-bottom: 30px;
   font-size: 80px;
+  font-family: 'Montserrat Extra Bold';
 }
 
 .header_bottom .header_bottom_from {
@@ -180,6 +248,8 @@ a {
   margin: 0;
   padding-bottom: 10px;
   font-size: 50px;
+  font-family: 'Montserrat Extra Bold';
+  margin-left: 25px;
 }
 
 .header_bottom p {
@@ -190,6 +260,7 @@ a {
 .header_bottom h3 {
   margin-top: 70px;
   font-size: 36px;
+  color: #ffffff;
 }
 
 .header_bottom .header_bottom_contact {
@@ -213,10 +284,9 @@ a {
 }
 
 .header_bottom .header_bottom_contact .header_bottom_contact_skype a {
-  color: aliceblue;
+  color: #ffffff;
   padding-bottom: 20px;
   font-size: 30px;
-  margin-left: -15px;
 }
 
 .header_bottom .header_bottom_contact .header_bottom_contact_email {
@@ -226,14 +296,12 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 100px;
 }
 
 .header_bottom .header_bottom_contact .header_bottom_contact_email a {
   color: aliceblue;
   padding-bottom: 20px;
   font-size: 30px;
-  margin-left: -15px;
 }
 
 .about-us {
@@ -256,25 +324,49 @@ a {
   margin-bottom: 45px;
   font-size: 50px;
   margin-top: 145px;
+  font-family: 'Montserrat Extra Bold';
+  color: #3c3c3c;
 }
 
-.about-us_img {
-  float: left;
-  margin-right: 45px;
-  margin-bottom: 45px;
-}
-
-.about-us_text p {
-  font-size: 19px;
-}
-
-.about-us_description_item {
+.about-us_description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: #4f4f4f;
+  font-family: 'Source Sans Pro Bold';
+  line-height: 29px;
 }
 
-.about-us_description_item img {
+.about-us_description .about-us_description_wrap {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about-us_description .about-us_description_wrap .about-us_description_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-us_description .about-us_description_wrap .about-us_description_item p {
+  font-size: 19px;
+  margin-bottom: 40px;
+}
+
+.about-us_description .about-us_description_wrap .about-us_description_item img {
   max-width: 125px;
   max-height: 125px;
 }
@@ -295,6 +387,21 @@ a {
   border-radius: 30px;
   color: #fedbd6;
   font-size: 20px;
+  margin-top: 70px;
+  font-family: 'Proxima Nova Regular';
+}
+
+.payments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .payments h2 {
@@ -302,9 +409,10 @@ a {
   font-size: 50px;
   margin-top: 115px;
   margin-bottom: 85px;
+  font-family: 'Montserrat Extra Bold';
 }
 
-.payments span {
+.payments h2 span {
   color: #fa4a33;
 }
 
@@ -315,9 +423,11 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 auto;
   max-width: 1170px;
   margin-bottom: 100px;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .payments_block .payments_item {
@@ -334,11 +444,18 @@ a {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   font-size: 19px;
+  font-family: 'Source Sans Pro Bold';
+  line-height: 28.13px;
 }
 
 .payments_block .payments_item img {
   max-width: 125px;
   max-height: 125px;
+}
+
+.payments_block .payments_item p {
+  margin-top: 30px;
+  text-align: center;
 }
 
 .contact {
@@ -356,13 +473,14 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
+  color: #ffffff;
 }
 
 .contact h2 {
-  color: #ffffff;
   font-size: 50px;
   margin-top: 60px;
   margin-bottom: 50px;
+  font-family: 'Montserrat Extra Bold';
 }
 
 .contact .contact_item {
@@ -390,13 +508,11 @@ a {
 }
 
 .contact .contact_item .contact_icons a {
-  color: #ffffff;
   font-size: 19px;
-  margin-left: 30px;
+  color: #ffffff;
 }
 
 .contact .contact_item .contact_icons p {
-  color: #ffffff;
   font-size: 19px;
   margin-left: 30px;
 }
@@ -417,18 +533,68 @@ a {
 
 .faq h2 {
   margin-top: 160px;
+  padding-left: 110px;
+  font-family: 'Montserrat Extra Bold';
+  font-size: 50px;
+  color: #3c3c3c;
 }
 
 .faq .faq_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 100px;
+  padding-left: 110px;
 }
 
-.faq .faq_item ul li {
-  margin: 0;
+.faq_title {
+  font-family: 'Source Sans Pro Bold';
+  font-size: 30px;
+  color: #4f4f4f;
+  background-color: #f8fcff;
   padding: 0;
-  list-style-type: none;
+  border: none;
+  margin-top: 60px;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: start;
+}
+
+.faq_title ::after {
+  content: '\f055';
+  font-family: "fontawesome";
+  font-size: 14px;
+  float: right;
+  color: #1b1b1b;
+}
+
+.faq_response {
+  font-family: 'Source Sans Pro Bold';
+  font-size: 19px;
+  color: #4f4f4f;
+  line-height: 28.13px;
+  margin-top: 25px;
+  display: none;
+  -webkit-transition: max-height 0.2s ease-in-out;
+  transition: max-height 0.2s ease-in-out;
+}
+
+.panel {
+  padding: 0 18px;
+  color: #212121;
+  background-color: #fff;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.3s ease-out;
+  transition: max-height 0.3s ease-out;
 }
 
 .footer {
@@ -446,5 +612,28 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  padding-top: 115px;
+  padding-bottom: 105px;
+}
+
+.footer .content_footer .footer_logo {
+  color: #ffffff;
+  font-family: 'Montserrat Bold';
+  font-size: 36px;
+}
+
+.footer .content_footer .footer_menu a {
+  font-family: 'Source Sans Pro Regular';
+  color: #ffffff;
+  font-size: 17px;
+  margin-left: 35px;
+}
+
+.footer .content_footer .footer_contact img {
+  margin-left: 25px;
 }
 /*# sourceMappingURL=style.css.map */

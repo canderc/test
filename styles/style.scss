@@ -7,9 +7,10 @@
 }
 
 .content {
-    max-width: 1170px;
+    max-width: 1170px; // todo перенести в переменную!
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 0 auto;
 }
 
 a {
@@ -18,13 +19,10 @@ a {
 
 .header_top {
     background: black;
-    display: flex;
-    justify-content: space-around;
-
+    
     .header_top_social {
         display: flex;
-        margin-right: 670px;
-        
+                
         img {
             margin-right: 12px;
             padding-top: 10px;
@@ -35,14 +33,17 @@ a {
     .header_top_contact {
         display: flex;
         align-items: center;
-        margin-right: -40px;
+        
+        :nth-child(3) {
+            margin-left: 20px;
+        }
 
         a {
-            margin-right: 40px;
             padding-bottom: 5px;
             color: #ffffff;
             font-family: 'ProximaNova';
             font-size: 17px;
+            font-family: 'Proxima Nova Semibold';
         }
 
         img {
@@ -55,27 +56,32 @@ a {
 .logo {
     font-size: 36px;
     padding-left: 45px;
-    margin-right: 300px;
+    font-family: 'Montserrat Bold';
+    color: #0099ff;
+
+    span {
+        color: #3366cc;
+    }
 }
 
 .header_nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     max-width: 1170px;
     margin: 0 auto;
     margin-bottom: 50px;
     margin-top: 55px;
 
-    a {
-        margin-right: 45px;
-        color: #292929;
-        font-size: 20px;
-    }
-
     .header_nav_menu {
         display: flex;
         align-items: center;
-        margin-right: -45px;
+
+        a {
+            color: $text_color_header_nav;
+            font-size: 20px;
+            margin-left: 50px;
+            font-family: 'Source Sans Pro Regular'
+        }
     }
 }
 
@@ -86,14 +92,14 @@ a {
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
-    color: azure;
+    color: $text_color_header_bottom;
     border-top : 4px solid #009ce3;
 
     h1 {
-        font-family: 'Montserrat', sans-serif;
         margin-top: 110px;
         margin-bottom: 30px;
         font-size: 80px;
+        font-family: 'Montserrat Extra Bold';
     }
 
     .header_bottom_from {
@@ -109,20 +115,23 @@ a {
     }
 
     h2 {
-        color: #fa4a33;
+        color: $text_color_header_bottom_from;
         margin: 0;
         padding-bottom: 10px;
         font-size: 50px;
+        font-family: 'Montserrat Extra Bold';
+        margin-left: 25px;
     }
 
     p {
         margin-top: 30px;
-        font-size: 38px
+        font-size: 38px;
     }
 
     h3 {
         margin-top: 70px;
         font-size: 36px;
+        color: $text_color_header_bottom_contact
     }
 
     .header_bottom_contact {
@@ -136,23 +145,22 @@ a {
             color: aliceblue;
 
             a {
-                color: aliceblue;
+                color: $text_color_header_bottom_contact;
                 padding-bottom: 20px;
                 font-size: 30px;
-                margin-left: -15px;
+                
             }
         }
 
         .header_bottom_contact_email {
             display: flex;
             align-items: center;
-            margin-left: 100px;
+            
         
             a {
                 color: aliceblue;
                 padding-bottom: 20px;
                 font-size: 30px;
-                margin-left: -15px
             }
         }
         
@@ -173,24 +181,36 @@ a {
         margin-bottom: 45px;
         font-size: 50px;
         margin-top: 145px;
+        font-family: 'Montserrat Extra Bold';
+        color: $text_color_header_nav;
     }
 }
 
-.about-us_img {
-    float: left;
-    margin-right: 45px;
-    margin-bottom: 45px
-}
-
-.about-us_text p {
-    font-size: 19px
-}
-
-.about-us_description_item {
+.about-us_description {
     display: flex;
+    color: $text_color_about_us_description;
+    font-family: 'Source Sans Pro Bold';
+    line-height: 29px;
 
-    img {
-        @include icons
+    .about-us_description_wrap {
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .about-us_description_item {
+            display: flex;
+            align-items: center;
+
+            p {
+                font-size: 19px;
+                margin-bottom: 40px;
+            }
+
+            img {
+                @include icons;
+            }
+        }
     }
 }
 
@@ -203,30 +223,36 @@ a {
     justify-content: center;
     border-radius: 30px;
     color: #fedbd6;
-    font-size: 20px
+    font-size: 20px;
+    margin-top: 70px;
+    font-family: 'Proxima Nova Regular'
 }
 
 .payments {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
     h2 {
         text-align: center;
         font-size: 50px;
         margin-top: 115px;
         margin-bottom: 85px;
-    }
-        span {
-            color: #fa4a33;
-        }    
+        font-family: 'Montserrat Extra Bold';
 
+       span {
+            color: #fa4a33;
+        }
+    }    
 }
 
 
 .payments_block {
     display: flex;
     justify-content: center;
-    margin: 0 auto;
     max-width: 1170px;
     margin-bottom: 100px;
+    align-items: baseline;
 
     .payments_item {
         display: flex;
@@ -234,9 +260,16 @@ a {
         flex-direction: column;
         flex-basis: 100%;
         font-size: 19px;
+        font-family: 'Source Sans Pro Bold';
+        line-height: 28.13px;
 
         img {
             @include icons
+        }
+
+        p {
+            margin-top: 30px;
+            text-align: center;
         }
     }
 }
@@ -251,12 +284,13 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
+    color: $text_color_header_bottom_contact;
 
     h2 {
-        color: $text_color_wite;
         font-size: 50px;
         margin-top: 60px;
-        margin-bottom: 50px
+        margin-bottom: 50px;
+        font-family: 'Montserrat Extra Bold';
     }
     
     .contact_item {
@@ -274,18 +308,14 @@ a {
             }
 
             a{
-                color: $text_color_wite;
                 font-size: 19px;
-                margin-left: 30px;
+                color: $text_color_header_bottom_contact;
             }
 
             p {
-                color: $text_color_wite;
                 font-size: 19px;
                 margin-left: 30px;
             }
-
-            
         }
     }
 }
@@ -298,19 +328,60 @@ a {
 
     h2 {
        margin-top:  160px;
+       padding-left: 110px;
+       font-family: 'Montserrat Extra Bold';
+       font-size: 50px;
+       color: $text_color_header_nav;
     }
 
     .faq_item {
         display: flex;
-         ul {
-
-            li{
-                margin: 0;
-                padding: 0;
-                list-style-type: none
-            }
-         }
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 100px;
+        padding-left: 110px;
     }
+}
+
+.faq_title {
+    font-family: 'Source Sans Pro Bold';
+    font-size: 30px;
+    color: $text_color_about_us_description;
+    background-color:  #f8fcff;
+    padding: 0;
+    border: none;
+    margin-top: 60px;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: start;
+
+    ::after {
+        content: '\f055';
+        font-family: "fontawesome";
+        font-size: 14px;
+        float: right; 
+        color: #1b1b1b
+    }
+}
+
+.faq_response {
+    font-family: 'Source Sans Pro Bold';
+    font-size: 19px;
+    color: $text_color_about_us_description;
+    line-height: 28.13px;
+    margin-top: 25px;
+    display: none;
+    transition: max-height 0.2s ease-in-out;
+}
+
+.panel {
+    padding: 0 18px;
+    color: #212121;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
 }
 
 .footer {
@@ -321,5 +392,30 @@ a {
         max-width: 1170px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding-top: 115px;
+        padding-bottom: 105px;
+
+        .footer_logo {
+            color: $text_color_header_bottom_contact;
+            font-family: 'Montserrat Bold';
+            font-size: 36px;
+        }
+
+        .footer_menu {
+            
+
+            a {
+                font-family: 'Source Sans Pro Regular';
+                color: $text_color_header_bottom_contact;
+                font-size: 17px;
+                margin-left: 35px;
+            }
+        }
+
+        .footer_contact img {
+            margin-left: 25px;
+        }
     }
 }

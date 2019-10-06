@@ -11,8 +11,7 @@
 
 <body>
     <div class="wrap">
-        <header class="header">
-
+        <header class="header" id="home">
             <div class="header_top">
                 <div class="content">
                     <div class="header_top_social">
@@ -29,13 +28,13 @@
                 </div>
             </div>
             <nav class="header_nav">
-                <p class="logo">New Digital</p>
+                <p class="logo"><span>New</span> Digital</p>
                 <div class="header_nav_menu">
-                    <a href="#">Home</a>
-                    <a href="#">About us</a>
-                    <a href="#">Why Us?</a>
-                    <a href="#">FAQ</a>
-                    <a href="#">Post Now</a>
+                    <a href="#home">Home</a>
+                    <a href="#about">About us</a>
+                    <a href="#why_us">Why Us?</a>
+                    <a href="#questions">FAQ</a>
+                    <a href="#post_now">Post Now</a>
                     <a href="#">Blog</a>
                 </div>
             </nav>
@@ -58,35 +57,41 @@
                 </div>
             </div>
         </header>
-        <section class="about-us">
+        <section class="about-us" id="about">
             <h2>About Us</h2>
-            <div class="about-us_text">
+            <div class="about-us_description">
                 <div class="about-us_img"><img src="img/img.jpg" alt="img"></div>
-                <div class="about-us_description_item">
-                    <img src="img/about1.png" alt="image">
-                    <p>We place feature articles for clients on news and niche relevant blog sites. Articles can contain
-                        interviews with you or news where you or your company is the source throughout the post.
-                    </p>
-                </div>
-                <div class="about-us_description_item">
-                    <img src="img/about2.png" alt="image">
-                    <p>We can also arrange product or service promotion within the post on certain platforms. All sites
-                        are authority sites and importantly are SEM Rush checked
-                        for real traffic as well as DA and Trust Flow.
-                    </p>
-                </div>
-                <div class="about-us_description_item">
-                    <img src="img/about3.png" alt="image">
-                    <p>We make sure that you get branded links to your site that are do follow for SEO value. If any
-                        sites do not allow features we have arrangements to get a quote and a link as a minimum for our
-                        clients. This way you are still able to garner the authority of being a contributor to a niche
-                        relevant article. This will always be advised pre order.
-                    </p>
+                <div class="about-us_description_wrap">
+                    <div class="about-us_description_item">
+                        <img src="img/about1.png" alt="image">
+                        <p>We place feature articles for clients on news and niche relevant blog sites. Articles can
+                            contain
+                            interviews with you or news where you or your company is the source throughout the post.
+                        </p>
+                    </div>
+                    <div class="about-us_description_item">
+                        <img src="img/about2.png" alt="image">
+                        <p>We can also arrange product or service promotion within the post on certain platforms. All
+                            sites
+                            are authority sites and importantly are SEM Rush checked
+                            for real traffic as well as DA and Trust Flow.
+                        </p>
+                    </div>
+                    <div class="about-us_description_item">
+                        <img src="img/about3.png" alt="image">
+                        <p>We make sure that you get branded links to your site that are do follow for SEO value. If any
+                            sites do not allow features we have arrangements to get a quote and a link as a minimum for
+                            our
+                            clients. This way you are still able to garner the authority of being a contributor to a
+                            niche
+                            relevant article. This will always be advised pre order.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <a href="#" class="btn">Get a Feature Post</a>
+            <a href="#" class="btn" id="post_now">Get a Feature Post</a>
         </section>
-        <section class="payments">
+        <section class="payments" id="why_us">
             <h2>Post Start From <span>Only $250</span></h2>
             <div class="payments_block">
                 <div class="payments_item">
@@ -108,7 +113,7 @@
                 </div>
             </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="cont">
             <h2>Contact Us</h2>
             <div class="contact_item">
                 <div class="contact_icons">
@@ -125,32 +130,26 @@
                 </div>
             </div>
         </section>
-        <section class="faq">
+        <section class="faq" id="questions">
             <h2>FAQ</h2>
             <div class="faq_item">
-                <ul>
-                    <li>
-                        <input type="checkbox" checked>
-                        <h3>Can I use my own content?</h3>
-                        <p>Yes. You can use your content.</p>
-                    </li>
-                    <li>
-                        <input type="checkbox" checked>
-                        <h3>Are feature guest posts any good for SEO?</h3>
-                        <p>In short - YES. They often contain branded links and any links is surrounded by incredibly.
-                        </p>
-                    </li>
-                    <li>
-                        <input type="checkbox" checked>
-                        <h3>Can these pages rank for keywords?</h3>
-                        <p>Yes. Pages are ranked by keywords.</p>
-                    </li>
-                    <li>
-                        <input type="checkbox" checked>
-                        <h3>Can I manipulate titles of posts to carry specific keywords of phrases?</h3>
-                        <p>Yes. You can manipulate post names.</p>
-                    </li>
-                </ul>
+                <button class="faq_title">Can I use my own content?</button>
+                <div class="faq_response">
+                    <p>Yes. You can use your content.</p>
+                </div>
+                <button class="faq_title">Are feature guest posts any good for SEO?</button>
+                <div class="faq_response">
+                    <p>In short - YES. They often contain branded links and any links is surrounded by incredibly.</p>
+                </div>
+                <button class="faq_title">Can these pages rank for keywords?</button>
+                <div class="faq_response">
+                    <p>Yes. Pages are ranked by keywords.</p>
+                </div>
+                <button class="faq_title">Can I manipulate titles of posts to carry specific keywords of
+                    phrases?</button>
+                <div class="faq_response">
+                    <p>Yes. You can manipulate post names.</p>
+                </div>
             </div>
         </section>
         <footer class="footer">
@@ -158,11 +157,11 @@
                 <div class="footer_logo">New Digital</div>
                 <nav class="footer_menu">
                     <a href="#">Home</a>
-                    <a href="#">About As</a>
-                    <a href="#">Why Us?</a>
-                    <a href="#">FAQ</a>
-                    <a href="#">Contact</a>
-                    <a href="#">Post Now</a>
+                    <a href="#about">About As</a>
+                    <a href="#why_us">Why Us?</a>
+                    <a href="#questions">FAQ</a>
+                    <a href="#cont">Contact</a>
+                    <a href="#post_now">Post Now</a>
                 </nav>
                 <div class="footer_contact">
                     <img src="img/fbFooter.png" alt="image">
@@ -172,6 +171,7 @@
             </div>
         </footer>
     </div>
+    <script src="./js/naming.js"></script>
 </body>
 
 </html>
