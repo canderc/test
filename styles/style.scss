@@ -1,5 +1,9 @@
-@import "settings";
-@import "reset";
+@import "settings.scss";
+@import "reset.scss";
+
+.active {
+    background: #fa4a33;
+}
 
 .wrap {
     max-width: 1920px;
@@ -20,13 +24,14 @@ a {
 .header_top {
     background: black;
     
-    .header_top_social {
+    &_social {
         display: flex;
-                
+                        
         img {
             margin-right: 12px;
             padding-top: 10px;
-            padding-bottom: 5px
+            padding-bottom: 5px;
+            cursor: pointer;
         }
     }
 
@@ -163,8 +168,7 @@ a {
                 font-size: 30px;
             }
         }
-        
-        
+               
     }
     
 }
@@ -192,6 +196,11 @@ a {
     font-family: 'Source Sans Pro Bold';
     line-height: 29px;
 
+    .about-us_img {
+        display: flex;
+        align-items: center
+    }
+
     .about-us_description_wrap {
         align-content: center;
         display: flex;
@@ -200,7 +209,7 @@ a {
 
         .about-us_description_item {
             display: flex;
-            align-items: center;
+            align-items: inherit;
 
             p {
                 font-size: 19px;
@@ -277,9 +286,6 @@ a {
 
 
 .contact {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     background-image: url("../img/background2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -291,17 +297,21 @@ a {
         margin-top: 60px;
         margin-bottom: 50px;
         font-family: 'Montserrat Extra Bold';
+        text-align: center;
     }
     
     .contact_item {
         display: flex;
         max-width: 1170px;
         padding-bottom: 50px;
+        justify-content: space-between;
+        line-height: 28.13px;
+        margin: 0 auto;
         
         .contact_icons {
             display: flex;
             align-items: center;
-            flex-basis: 100%;
+            width: 325px;
 
             img {
                 @include icons;
@@ -314,7 +324,6 @@ a {
 
             p {
                 font-size: 19px;
-                margin-left: 30px;
             }
         }
     }
@@ -325,6 +334,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin: 0 auto;
 
     h2 {
        margin-top:  160px;
@@ -337,33 +347,50 @@ a {
     .faq_item {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         padding-bottom: 100px;
         padding-left: 110px;
     }
+}
+
+.faq_wrap {
+    border-bottom: 1px solid #d1d1d1;
+    padding-bottom: 30px;
 }
 
 .faq_title {
     font-family: 'Source Sans Pro Bold';
     font-size: 30px;
     color: $text_color_about_us_description;
-    background-color:  #f8fcff;
+    background-color: #ffffff;
     padding: 0;
     border: none;
     margin-top: 60px;
     outline: none;
     cursor: pointer;
-    width: 100%;
     text-align: start;
-
-    ::after {
-        content: '\f055';
-        font-family: "fontawesome";
-        font-size: 14px;
-        float: right; 
-        color: #1b1b1b
-    }
+    width: 100%;
 }
+
+.faq_title::after {
+    content: ">";
+    font-size: 30px;
+    float: right; 
+    color: #d1d1d1;
+    text-align: end;
+    transform:  rotate(90deg);
+    padding-left: 20px;
+    vertical-align: middle;
+   
+}
+
+.active::after {
+    transform:  rotate(-90deg);
+    color: #1b1b1b;
+    position: relative;
+    top: 20px;
+}
+
+
 
 .faq_response {
     font-family: 'Source Sans Pro Bold';
@@ -372,17 +399,10 @@ a {
     line-height: 28.13px;
     margin-top: 25px;
     display: none;
-    transition: max-height 0.2s ease-in-out;
+    padding-bottom: 35px;
 }
 
-.panel {
-    padding: 0 18px;
-    color: #212121;
-    background-color: #fff;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-}
+
 
 .footer {
     background: #1b1b1b;
@@ -416,6 +436,15 @@ a {
 
         .footer_contact img {
             margin-left: 25px;
+            cursor: pointer;
         }
     }
 }
+
+@import "media.scss";
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+@media (max-width: 1185px) {
+  .header .content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .header_nav {
+    padding-right: 10px;
+  }
+  .content_footer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .about-us_description {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .about-us_description .about-us_description_wrap .about-us_description_item p {
+    font-size: 16px;
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 982px) {
+  .logo {
+    font-size: 30px;
+  }
+}
+/*# sourceMappingURL=media.css.map */

@@ -8,7 +8,6 @@ for (var i = 0; i < faq.length; i++) {
           panel.style.display = "none";
       } else {
           panel.style.display = "block";
-          panel.style.borderBottom = "1px solid black"
-      }
+        }
   });
 }
