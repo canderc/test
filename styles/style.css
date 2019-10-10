@@ -95,6 +95,7 @@ table {
 
 .wrap {
   max-width: 1920px;
+  min-width: 320px;
   margin: 0 auto; }
 
 .content {
@@ -253,8 +254,8 @@ a {
         font-size: 19px;
         margin-bottom: 40px; }
       .about-us_description .about-us_description_wrap .about-us_description_item img {
-        max-width: 125px;
-        max-height: 125px; }
+        height: 125px;
+        width: 125px; }
 
 .btn {
   width: 240px;
@@ -298,8 +299,8 @@ a {
     line-height: 28.13px;
     margin-bottom: 20px; }
     .payments_block .payments_item img {
-      max-width: 125px;
-      max-height: 125px; }
+      height: 125px;
+      width: 125px; }
     .payments_block .payments_item p {
       margin-top: 10px;
       text-align: center; }
@@ -315,7 +316,8 @@ a {
     margin-top: 60px;
     margin-bottom: 50px;
     font-family: 'Montserrat Extra Bold';
-    text-align: center; }
+    text-align: center;
+    padding-top: 20px; }
   .contact .contact_item {
     display: flex;
     max-width: 1170px;
@@ -328,8 +330,8 @@ a {
       align-items: center;
       width: 325px; }
       .contact .contact_item .contact_icons img {
-        max-width: 125px;
-        max-height: 125px; }
+        height: 125px;
+        width: 125px; }
       .contact .contact_item .contact_icons a {
         font-size: 19px;
         color: #ffffff; }
@@ -378,14 +380,13 @@ a {
   color: #d1d1d1;
   text-align: end;
   transform: rotate(90deg);
-  padding-left: 20px;
   vertical-align: middle; }
 
 .active::after {
   transform: rotate(-90deg);
   color: #1b1b1b;
   position: relative;
-  top: 20px; }
+  padding-left: 0; }
 
 .faq_response {
   font-family: 'Source Sans Pro Bold';
@@ -527,7 +528,7 @@ a {
       align-items: flex-start;
       justify-content: space-around;
       display: none;
-      background-color: rgba(56, 53, 216, 0.8);
+      background-color: #0099ff;
       transition: 0.8s all; }
       .header .header_nav .header_nav_menu .small_menu {
         display: flex;
@@ -557,7 +558,7 @@ a {
     .header .header_nav .hamburg {
       display: block;
       position: fixed;
-      top: 15px;
+      top: 20px;
       width: 40px;
       right: 10px; }
       .header .header_nav .hamburg span {

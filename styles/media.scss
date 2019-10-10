@@ -231,7 +231,7 @@
                 align-items: flex-start;
                 justify-content: space-around;
                 display: none;
-                background-color: rgba($color: #3835d8, $alpha: 0.8);
+                background-color:#0099ff;
                 transition: 0.8s all;
 
                 .small_menu {
@@ -254,11 +254,10 @@
                         }
                         .small_menu_contact {
                             font-size: 16px;
-                                margin-top: 10px;
+                            margin-top: 10px;
                             margin-left: 5px;
                         }
                     }
-                    
                 }
 
                 a {
@@ -278,7 +277,7 @@
             .hamburg {
                 display: block;
                 position: fixed;
-                top: 15px;
+                top: 20px;
                 width: 40px;
                 right: 10px;
                 
@@ -484,7 +483,6 @@
                     font-size: 20px;
                     margin-top: 30px;
                 }
-
             }
         }
     }
@@ -514,7 +512,6 @@
                         margin-bottom: 10px;
                         font-size: 14px;
                     }
-
                 }
             }
         }
@@ -542,7 +539,6 @@
             }
         }
     }
-
 }
 
 @media (max-width:560px) {
@@ -565,7 +561,6 @@
                     padding-bottom: 3px;
                     margin-left: 0;
                 }
-
             }
 
             p {
