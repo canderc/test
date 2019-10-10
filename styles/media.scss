@@ -222,6 +222,7 @@
             }
 
             .header_nav_menu {
+                z-index: 1000;
                 position: fixed;
                 top: 0;
                 right: -100%;
@@ -275,6 +276,7 @@
             }
 
             .hamburg {
+                z-index: 1001;
                 display: block;
                 position: fixed;
                 top: 20px;

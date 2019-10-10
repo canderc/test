@@ -177,7 +177,7 @@ a {
     font-size: 80px;
     font-family: 'Montserrat Extra Bold'; }
   .header_bottom .header_bottom_from {
-    background-image: url(/img/vector.png);
+    background-image: url("../img/vector.png");
     margin: 0 auto;
     height: 82px;
     width: 400px;
@@ -519,6 +519,7 @@ a {
       font-size: 28px;
       padding-left: 0; }
     .header .header_nav .header_nav_menu {
+      z-index: 1000;
       position: fixed;
       top: 0;
       right: -100%;
@@ -556,6 +557,7 @@ a {
       display: flex;
       right: 0; }
     .header .header_nav .hamburg {
+      z-index: 1001;
       display: block;
       position: fixed;
       top: 20px;
