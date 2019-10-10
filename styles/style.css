@@ -386,7 +386,7 @@ a {
   transform: rotate(-90deg);
   color: #1b1b1b;
   position: relative;
-  padding-left: 0; }
+  padding-left: 5px; }
 
 .faq_response {
   font-family: 'Source Sans Pro Bold';
