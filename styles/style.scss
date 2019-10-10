@@ -90,6 +90,10 @@ a {
         display: flex;
         align-items: center;
 
+        .small_menu {
+            display: none;
+        }
+
         a {
             color: $text_color_header_nav;
             font-size: 20px;

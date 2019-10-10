@@ -153,6 +153,8 @@ a {
   .header_nav .header_nav_menu {
     display: flex;
     align-items: center; }
+    .header_nav .header_nav_menu .small_menu {
+      display: none; }
     .header_nav .header_nav_menu a {
       color: #3c3c3c;
       font-size: 20px;
@@ -500,12 +502,14 @@ a {
         padding-top: 10px; } }
 
 @media (max-width: 690px) {
-  .header_top .content {
-    align-items: center;
-    flex-wrap: wrap; }
-    .header_top .content .header_top_contact {
-      flex-wrap: wrap;
-      margin-bottom: 3px; }
+  .header_top {
+    display: none; }
+    .header_top .content {
+      align-items: center;
+      flex-wrap: wrap; }
+      .header_top .content .header_top_contact {
+        flex-wrap: wrap;
+        margin-bottom: 3px; }
   .header .header_nav {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -514,17 +518,35 @@ a {
       font-size: 28px;
       padding-left: 0; }
     .header .header_nav .header_nav_menu {
-      position: absolute;
-      top: 50px;
+      position: fixed;
+      top: 0;
       right: -100%;
       height: 100%;
-      width: 50%;
+      width: 70%;
       flex-direction: column;
       align-items: flex-start;
-      justify-content: space-between;
+      justify-content: space-around;
       display: none;
       background-color: rgba(56, 53, 216, 0.8);
       transition: 0.8s all; }
+      .header .header_nav .header_nav_menu .small_menu {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        align-items: center;
+        height: 15%;
+        justify-content: space-around; }
+        .header .header_nav .header_nav_menu .small_menu .header_top_social {
+          width: 100%;
+          justify-content: space-around; }
+        .header .header_nav .header_nav_menu .small_menu .header_top_contact {
+          vertical-align: bottom; }
+          .header .header_nav .header_nav_menu .small_menu .header_top_contact .contact_skype {
+            margin-bottom: 10px; }
+          .header .header_nav .header_nav_menu .small_menu .header_top_contact .small_menu_contact {
+            font-size: 16px;
+            margin-top: 10px;
+            margin-left: 5px; }
       .header .header_nav .header_nav_menu a {
         margin-left: 20px;
         font-size: 25px;
@@ -534,16 +556,17 @@ a {
       right: 0; }
     .header .header_nav .hamburg {
       display: block;
-      position: inherit;
-      top: 10%;
-      width: 40px; }
+      position: fixed;
+      top: 15px;
+      width: 40px;
+      right: 10px; }
       .header .header_nav .hamburg span {
         display: block;
         height: 5px;
         width: 100%;
         background: #3366cc;
         margin-top: 2px;
-        transition: 1s all; }
+        transition: 0.5s all; }
     .header .header_nav .hamb_active span {
       margin-top: -4px;
       background-color: #ffffff; }
