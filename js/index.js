@@ -11,3 +11,12 @@ for (var i = 0; i < faq.length; i++) {
         }
   });
 }
+
+var menu = document.querySelector ('.header_nav_menu');
+var menuItem = document.querySelectorAll ('.menu_item');
+var hamburg = document.querySelector ('.hamburg');
+
+hamburg.addEventListener ('click', function() {
+  hamburg.classList.toggle ('hamb_active');
+  menu.classList.toggle ('menu_active')
+});

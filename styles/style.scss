@@ -38,9 +38,17 @@ a {
     .header_top_contact {
         display: flex;
         align-items: center;
-        
-        :nth-child(3) {
-            margin-left: 20px;
+        flex-wrap: wrap;
+
+        .contact_skype {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact_email {
+            display: flex;
+            align-items: center;
         }
 
         a {
@@ -49,6 +57,7 @@ a {
             font-family: 'ProximaNova';
             font-size: 17px;
             font-family: 'Proxima Nova Semibold';
+
         }
 
         img {
@@ -262,7 +271,7 @@ a {
     max-width: 1170px;
     margin-bottom: 100px;
     align-items: baseline;
-
+    
     .payments_item {
         display: flex;
         align-items: center;
@@ -271,13 +280,14 @@ a {
         font-size: 19px;
         font-family: 'Source Sans Pro Bold';
         line-height: 28.13px;
+        margin-bottom: 20px;
 
         img {
             @include icons
         }
 
         p {
-            margin-top: 30px;
+            margin-top: 10px;
             text-align: center;
         }
     }

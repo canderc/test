@@ -117,9 +117,15 @@ a {
       cursor: pointer; }
   .header_top .header_top_contact {
     display: flex;
-    align-items: center; }
-    .header_top .header_top_contact :nth-child(3) {
-      margin-left: 20px; }
+    align-items: center;
+    flex-wrap: wrap; }
+    .header_top .header_top_contact .contact_skype {
+      margin-right: 20px;
+      display: flex;
+      align-items: center; }
+    .header_top .header_top_contact .contact_email {
+      display: flex;
+      align-items: center; }
     .header_top .header_top_contact a {
       padding-bottom: 5px;
       color: #ffffff;
@@ -287,12 +293,13 @@ a {
     flex-basis: 100%;
     font-size: 19px;
     font-family: 'Source Sans Pro Bold';
-    line-height: 28.13px; }
+    line-height: 28.13px;
+    margin-bottom: 20px; }
     .payments_block .payments_item img {
       max-width: 125px;
       max-height: 125px; }
     .payments_block .payments_item p {
-      margin-top: 30px;
+      margin-top: 10px;
       text-align: center; }
 
 .contact {
@@ -494,25 +501,58 @@ a {
 
 @media (max-width: 690px) {
   .header_top .content {
-    flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    flex-wrap: wrap; }
+    .header_top .content .header_top_contact {
+      flex-wrap: wrap;
+      margin-bottom: 3px; }
   .header .header_nav {
     margin-top: 20px;
     margin-bottom: 20px;
-    justify-content: space-around; }
+    justify-content: space-between; }
     .header .header_nav .logo {
-      font-size: 28px; }
+      font-size: 28px;
+      padding-left: 0; }
     .header .header_nav .header_nav_menu {
-      position: inherit;
+      position: absolute;
       top: 50px;
-      right: 0;
-      height: 15vh;
-      width: 15%;
+      right: -100%;
+      height: 100%;
+      width: 50%;
       flex-direction: column;
-      align-items: flex-start; }
+      align-items: flex-start;
+      justify-content: space-between;
+      display: none;
+      background-color: rgba(56, 53, 216, 0.8);
+      transition: 0.8s all; }
       .header .header_nav .header_nav_menu a {
         margin-left: 20px;
-        font-size: 18px; }
+        font-size: 25px;
+        color: #ffffff; }
+    .header .header_nav .menu_active {
+      display: flex;
+      right: 0; }
+    .header .header_nav .hamburg {
+      display: block;
+      position: inherit;
+      top: 10%;
+      width: 40px; }
+      .header .header_nav .hamburg span {
+        display: block;
+        height: 5px;
+        width: 100%;
+        background: #3366cc;
+        margin-top: 2px;
+        transition: 1s all; }
+    .header .header_nav .hamb_active span {
+      margin-top: -4px;
+      background-color: #ffffff; }
+      .header .header_nav .hamb_active span:nth-child(1) {
+        transform: translateY(15px) rotate(-45deg); }
+      .header .header_nav .hamb_active span:nth-child(2) {
+        display: none; }
+      .header .header_nav .hamb_active span:nth-child(3) {
+        transform: translateY(15px) rotate(45deg); }
   .header .header_bottom h1 {
     font-size: 50px;
     margin-top: 60px; }
@@ -528,7 +568,8 @@ a {
   .header .header_bottom h3 {
     margin-top: 30px; }
   .header .header_bottom .header_bottom_contact {
-    padding-bottom: 5px; }
+    padding-bottom: 5px;
+    flex-wrap: wrap; }
     .header .header_bottom .header_bottom_contact_skype a {
       font-size: 15px; }
     .header .header_bottom .header_bottom_contact_skype img {
@@ -544,9 +585,8 @@ a {
   .about-us .about-us_description {
     flex-direction: column;
     align-items: center; }
-    .about-us .about-us_description .about-us_img {
-      max-width: 500px;
-      max-height: 360px; }
+    .about-us .about-us_description .about-us_img img {
+      width: 100%; }
     .about-us .about-us_description .about-us_description_wrap {
       margin-top: 20px; }
       .about-us .about-us_description .about-us_description_wrap .about-us_description_item {
@@ -564,10 +604,11 @@ a {
     flex-direction: column;
     margin-bottom: 30px; }
     .payments .payments_block .payments_item {
-      flex-direction: row;
-      align-items: flex-start;
+      align-items: center;
       padding-left: 25px;
-      padding-right: 10px; }
+      padding-right: 10px;
+      flex-wrap: wrap;
+      width: 90%; }
     .payments .payments_block .payments_item img {
       max-width: 80px;
       max-height: 65px; }
@@ -604,6 +645,21 @@ a {
       .faq .faq_item .faq_wrap .faq_title {
         font-size: 20px;
         margin-top: 30px; }
+  .about-us h2 {
+    margin-top: 65px;
+    font-size: 38px; }
+  .about-us .about-us_description {
+    flex-direction: column;
+    align-items: center; }
+    .about-us .about-us_description .about-us_img img {
+      width: 100%; }
+    .about-us .about-us_description .about-us_description_wrap {
+      margin-top: 20px; }
+      .about-us .about-us_description .about-us_description_wrap .about-us_description_item {
+        align-items: end; }
+        .about-us .about-us_description .about-us_description_wrap .about-us_description_item p {
+          margin-bottom: 10px;
+          font-size: 14px; }
   .footer .content_footer {
     padding-top: 10px;
     padding-bottom: 10px; }
@@ -616,3 +672,45 @@ a {
       .footer .content_footer .footer_menu a {
         margin-left: 0;
         padding-top: 5px; } }
+
+@media (max-width: 560px) {
+  .header .header_bottom h1 {
+    font-size: 38px;
+    margin-top: 40px; }
+  .header .header_bottom .header_bottom_from {
+    height: 40px;
+    width: 215px; }
+    .header .header_bottom .header_bottom_from h2 {
+      font-size: 25px;
+      padding-bottom: 3px;
+      margin-left: 0; }
+  .header .header_bottom p {
+    font-size: 15px; }
+  .header .header_bottom h3 {
+    margin-top: 20px;
+    font-size: 24px; }
+  .header .header_bottom .header_bottom_contact {
+    padding-bottom: 5px;
+    flex-wrap: wrap; }
+    .header .header_bottom .header_bottom_contact_skype {
+      width: 245px; }
+    .header .header_bottom .header_bottom_contact_skype a {
+      font-size: 15px; }
+    .header .header_bottom .header_bottom_contact_skype img {
+      height: 100px;
+      width: 100px; }
+    .header .header_bottom .header_bottom_contact_email a {
+      font-size: 15px; }
+    .header .header_bottom .header_bottom_contact_email img {
+      height: 100px;
+      width: 100px; }
+  .payments h2 {
+    font-size: 36px;
+    margin-top: 85px;
+    margin-bottom: 65px; }
+  .faq h2 {
+    padding-left: 10px; }
+  .faq .faq_item {
+    padding-left: 10px; }
+  .footer .content_footer .footer_logo {
+    display: none; } }
